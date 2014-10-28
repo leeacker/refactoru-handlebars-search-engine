@@ -1,0 +1,27 @@
+doctype html
+html(lang='en')
+	head
+		link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css")
+		meta(charset="utf-8")
+		title Dev Language Search Engine
+
+	body
+		.container
+			block content
+
+
+
+	script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+	script(src='//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js')
+	script(src='//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js')
+	script(src='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js')
+	script(src='/main.js')
+	script#search-results-tmp(type='text/x-handlebars-template')
+		li.list-group-item
+			{{#if langName}}
+			p: strong {{langName}}
+			p {{langDesc}}
+			{{else}}
+			p Sorry, that term doesn't exist
+			{{/if}}
+		

@@ -1,0 +1,16 @@
+extends layout
+
+block content
+	h1.text-center Search Engine
+	.row
+		form.col-md-4.col-md-offset-4#search-form
+			div.form-group
+				input.form-control#search-input(type='text', placeholder='Enter a Search Term', title='searchInput')
+			div.text-center.form-group
+				input.btn.btn-danger#search-submit(type='submit', value='Search')
+
+	.row
+		h2 Search Results
+		ul.list-group#results
+
+	
